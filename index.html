@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>New Template</title>
+    <style>
+        body {
+            width: 98%;
+            background-color: rgb(0, 0, 0);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        .container {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 98%;
+            margin: 0px auto;
+        }
+
+        header {
+            width: 100%;
+            margin: 0px auto;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.787);
+            padding: 7px 0;
+        }
+        .home-first{
+            width: 100%;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .left {
+            padding: 15px;
+            filter: invert(1);
+        }
+
+        .right {
+            width: 43%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: flex;
+        }
+
+        .right a {
+            padding: 10px;
+            font-size: medium;
+            text-decoration: none;
+            color: aliceblue;
+            position: relative;
+            /* This ensures the pseudo-element is positioned relative to the anchor */
+        }
+
+        .right a:hover {
+            text-decoration: none;
+            /* Disable default underline */
+        }
+
+        /* Add the underline effect */
+        .right a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            /* Set the height of the underline */
+            background-color: aliceblue;
+            /* Same color as text */
+            transition: width 0.4s ease;
+            /* Control the speed and smoothness of the animation */
+        }
+
+        /* When hovering, expand the underline */
+        .right a:hover::after {
+            width: 100%;
+        }
+
+        .nav-back-c {
+            background-image: url(assets/sec-btn.back.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+        }
+
+        .tringle {
+            margin-left: 50px;
+        }
+
+        section {
+            width: 100%;
+            padding-top: 110px;
+        }
+
+        .black-back {
+            background-color: rgb(10, 9, 9);
+            padding-top: 30px;
+            padding-bottom: 70px;
+        }
+
+        .flex-container {
+            margin: 0px auto;
+            max-width: 95%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .para {
+            line-height: 2rem;
+        }
+
+        .para1 {
+            color: aliceblue;
+        }
+
+        .image {
+            height: 500px;
+            background-image: url(assets/star-shape.png);
+            background-repeat: no-repeat;
+            opacity: 0.7;
+        }
+
+
+        .glass div img {
+            margin: 170px 35px;
+            position: relative;
+            animation-name: example;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: infinite;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes example {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                left: 0px;
+                top: 30px;
+            }
+
+        }
+
+        .blue-circle {
+            height: 450px;
+            width: 0;
+        }
+
+        .btn {
+            border: 2px solid rgba(0, 0, 0, 0.787);
+            background-color: rgb(7, 200, 191);
+            padding: 12px 50px;
+        }
+
+        .btn:hover {
+            background-color: rgb(48, 45, 45);
+            transition: 0.6s;
+        }
+
+        .btn a {
+            color: darkslategrey;
+            text-decoration: none;
+        }
+
+        .btn a:hover {
+            color: aliceblue;
+        }
+
+
+
+        .disc {
+            color: aliceblue;
+            text-align: center;
+            margin: 0px auto;
+            padding: 30px;
+            width: 70%;
+        }
+
+        .img i {
+            color: aliceblue;
+        }
+
+
+        .img {
+            text-align: center;
+            padding: 50px;
+            background-image: url(assets/icon-shape.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .features {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .features-flex {
+            width: 30%;
+            height: 350px;
+            border: 1px solid rgb(50, 49, 49);
+            margin: 1px 10px;
+        }
+
+        .features-flex:hover {
+            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.275);
+            transition: 0.7s;
+        }
+
+        .services {
+            background-color: rgba(55, 52, 52, 0.694);
+            padding: 33px 0px;
+        }
+
+        .services-felx {
+            height: 410px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .services-disc {
+            color: white;
+            width: 55%;
+            line-height: 1.5rem;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        .services-disc h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: xx-large;
+            line-height: 2.5rem;
+            color: rgba(255, 255, 255, 0.838);
+        }
+
+        .services-boxes {
+            width: 75%;
+        }
+
+        .services-boxes-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box-1 {
+            color: rgba(255, 255, 255, 0.837);
+            width: 25%;
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        .box-1 a {
+            text-decoration: none;
+        }
+
+        .box-1:hover {
+            background-color: rgba(120, 130, 132, 0.455);
+            border-radius: 5px;
+            transition: 1.2s;
+        }
+
+        .box-1 a {
+            color: rgb(39, 218, 167);
+        }
+
+        .outer-youtube-link-flex {
+            background-color: rgba(49, 63, 67, 0.841);
+        }
+
+        .youtube-link-flex {
+            margin: 0px auto;
+            width: 77%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 0px;
+        }
+
+        .youtube-link-image {
+            background-color: black;
+        }
+
+        .youtube-link-image img {
+            margin-top: -50px;
+            margin-right: -70px;
+            margin-bottom: 60px;
+            padding-left: 90px;
+
+        }
+
+        .play-btn i {
+            color: white;
+            margin-top: 350px;
+            width: 2px;
+        }
+
+        .play-btn i:hover {
+            color: rgb(16, 134, 107);
+            cursor: pointer;
+            transition: 0.7s;
+        }
+
+        .parterners-center {
+            background-color: black;
+        }
+
+        .parteners {
+            width: 83%;
+            padding: 100px 0;
+            margin: 0 auto;
+        }
+
+        .intro {
+            width: 50%;
+            line-height: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .parterners-flex {
+            background-image: url(assets/map.png);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parterners-images {
+            width: 44%;
+            margin-left: 50px;
+        }
+
+        .parterners-images-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .image-part div {
+            background-color: rgba(180, 184, 222, 0.518);
+            padding: 20px 25px;
+            margin: 30px 0px;
+            border-radius: 5px;
+        }
+
+        #slide-down {
+            margin-top: 70px;
+        }
+
+        #sec-btn {
+            background-color: #000000;
+            border: 1px solid rgb(46, 249, 147);
+        }
+
+        #sec-btn:hover {
+            background-image: url(assets/sec-btn.back.jpg);
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #sec-btn a {
+            color: white;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #sec-btn a:hover {
+            color: rgb(99, 95, 95);
+        }
+
+        .product-image {
+            width: 83%;
+            margin: 0px auto;
+            padding: 40px 0px;
+        }
+
+        .product-img {
+            background-color: #a2afb78f;
+            width: 50%;
+            height: 660px;
+        }
+
+        .product-view-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .specification {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+        }
+
+        table tr td {
+            line-height: 2.5rem;
+            color: white;
+        }
+
+        .arrows {
+            text-align: center;
+            padding: 17px 0px;
+        }
+
+        .arrows i {
+            margin: 0px 10px;
+            color: rgba(255, 255, 255, 0.624);
+            cursor: pointer;
+        }
+
+        .product-category-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-intro {
+            text-align: center;
+            width: 50%;
+            padding: 25px 0px;
+            margin: 15px 0px;
+        }
+
+        .category-intro h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: xx-large;
+        }
+
+        .category-intro p {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgba(255, 255, 255, 0.701);
+        }
+
+        .categories-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .categories {
+            width: 85%;
+        }
+
+        .img-flex {
+            margin: 0px 40px;
+        }
+
+        .img-flex img {
+            margin: 15px 0px;
+        }
+
+        #img-flex-1 {
+            height: 910px;
+        }
+
+        .img-flex div:hover {
+            cursor: pointer;
+            margin-bottom: 50px;
+            transition: 0.3s;
+        }
+
+        .photo-gallery {
+            padding: 135px 0px;
+        }
+
+        .img-section {
+            text-align: center;
+        }
+
+        .img-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: x-large;
+        }
+
+        .image-dot img {
+            margin-left: 700px;
+        }
+
+        .img-10 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .angullers {
+            background-image: url(assets/img-section.jpg);
+            height: 560px;
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .angullers i {
+            margin: 0px 15px;
+            color: rgb(169, 183, 195);
+        }
+
+        .angullers i:hover {
+            margin: 0px 28px;
+            transition: 0.7s;
+            cursor: pointer;
+        }
+
+        .user-rating {
+            text-align: center;
+        }
+
+        .user-heading {
+            text-align: center;
+            width: 37%;
+            margin: 80px auto;
+        }
+
+        .user-heading h1 {
+            color: rgb(238, 241, 243);
+            font-size: xx-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 20px 0px;
+        }
+
+        .username h3 {
+            color: antiquewhite;
+        }
+
+        .user-heading p {
+            width: 105%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(197, 197, 197);
+        }
+
+        .usr-1-rating {
+            text-align: center;
+            box-sizing: border-box;
+            width: 27%;
+        }
+
+        .user-iamge img {
+            width: 17%;
+            border-radius: 100px;
+        }
+
+        .rating-stars i {
+            color: goldenrod;
+        }
+
+        .rating-contyainer-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .comment p {
+            color: rgb(181, 181, 181);
+        }
+
+        .role p {
+            color: rgb(107, 102, 102);
+        }
+
+        .rating-container {
+            text-align: center;
+            margin: 35px auto;
+            width: 87%;
+        }
+
+        details {
+            color: aliceblue;
+            background-color: rgb(69, 76, 86);
+            padding: 15px 0px;
+            border-radius: 7px;
+            margin: 10px auto;
+        }
+
+        details summary {
+            list-style-type: none;
+        }
+
+        details summary i {
+            margin-left: 250px;
+        }
+
+        details p {
+            color: aliceblue;
+        }
+
+        .information {
+            padding: 10px;
+            background-color: #04021b;
+        }
+
+        .information-heading {
+            margin: 10px auto;
+            text-align: center;
+            line-height: 1.5rem;
+            width: 70%;
+        }
+
+        .information-heading h1 {
+            color: rgb(190, 204, 216);
+        }
+
+        .information-heading p {
+            color: rgb(156, 169, 181);
+        }
+
+        .information-start {
+            margin: 200px 90px;
+        }
+
+        .quaries {
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .flexer {
+            display: flex;
+            align-items: center;
+        }
+
+        .image-flexer img {
+            width: 87%;
+        }
+
+        .questions {
+            width: 90%;
+        }
+
+        footer {
+            background-color: rgb(59, 73, 90);
+        }
+
+        .footer-flexer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .box1 h3 {
+            margin-left: 20px;
+        }
+
+        .box2 h3 {
+            margin-left: 20px;
+        }
+
+        .box1 li {
+            list-style-type: none;
+            padding: 10px 20px;
+        }
+
+        .box1 li:hover {
+            margin-left: 4px;
+            transition: 0.4s;
+        }
+
+        .box1 li a {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        .box1 li a:hover {
+            color: rgb(18, 231, 156);
+        }
+
+        .box2 li {
+            list-style-type: none;
+            padding: 10px 20px;
+        }
+
+        .box2 li:hover {
+            margin-left: 4px;
+            transition: 0.4s;
+        }
+
+        .box2 li a {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        .box2 li a:hover {
+            color: rgb(18, 231, 156);
+        }
+
+        .news-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .news-flex a {
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .news-flex a:hover {
+            color: #30e496;
+        }
+
+        .news-flex img {
+            width: 80px;
+            border-radius: 7px;
+        }
+
+        .news-flex h3 {
+            width: 78%;
+        }
+
+        .outside-img h3 a {
+            color: antiquewhite;
+        }
+
+        .box4 h3,
+        h4,
+        p {
+            color: rgb(218, 225, 233);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .example input {
+            border: 1px solid rgb(155, 180, 201);
+            padding: 15px 50px;
+            background-color: rgb(126, 143, 156);
+        }
+
+        .example input:hover {
+            border: 1px solid rgb(155, 180, 201);
+        }
+
+        ::placeholder {
+            color: rgb(255, 255, 255);
+        }
+
+        .example button {
+            padding: 15px 50px;
+            background-image: url(assets/sec-btn.back.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 1px solid rgb(28, 240, 106);
+            cursor: pointer;
+        }
+
+        .example button:hover {
+            border: 2px solid rgb(45, 58, 50);
+        }
+
+        .social-links i {
+            color: #000000;
+            border-radius: 50px;
+        }
+
+        .social-links i:hover {
+            color: #30e496;
+            transition: 0.8s;
+        }
+
+        .copywrite-area {
+            margin: 20px 120px;
+        }
+
+        .aline-center-copywrite {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 34%;
+        }
+
+        .link h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .link a {
+            text-decoration: none;
+        }
+
+        .link div a h3:hover {
+            color: #30e496;
+            transition: 0.6s;
+        }
+
+        .policies {
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .policies li {
+            list-style-type: none;
+        }
+
+        .policies li a {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        .policies li a:hover {
+            color: #30e496;
+        }
+
+        .lst-btn {
+            background-color: rgb(84, 93, 105);
+            border: 2px solid rgb(84, 93, 105);
+            padding: 15px 18px;
+            border-radius: 4px;
+        }
+
+        .lst-btn:hover {
+            background-image: url(assets/sec-btn.back.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .lst-btn div a {
+            color: rgb(34, 32, 32);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="home-first">
+                <nav class="navbar">
+                    <div class="left">
+                        <a href="index.html"><img src="assets/logo (1).png" alt=""></a>
+                    </div>
+                    <div class="right">
+                        <div><a href="">HOME</a></div>
+                        <div><a href="">FEATURES</a></div>
+                        <div><a href="">SPEC</a></div>
+                        <div><a href="">SHOP</a></div>
+                        <div><a href="">DESIGN</a></div>
+                        <div><a href="">FAQ</a></div>
+                        <div><a class="nav-back-c"
+                                href="https://templates.envytheme.com/busan/default/contact.html">SUPPORT</a></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <di class="container">
+            <div class="tringle">
+                <img src="assets/1.png" alt="">
+            </div>
+            <div class="flex-container">
+                <div class="para">
+                    <div class="para1">
+                        <p>PXC 550 Wireless</p>
+                        <h1>The future of eye tracking. Understand natural visual attention</h1>
+                        <p>labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                    </div>
+                    <div class="para2">
+                        <button class="btn"><a href="index.html">Explore more</a></button>
+                    </div>
+                </div>
+                <div class="image">
+                    <div class="glass">
+                        <div><img src="assets/glasses.png" alt="glasses"></div>
+                    </div>
+                </div>
+                <div class="blue-circle">
+                    <img src="assets/blue-circle.png" alt="">
+                </div>
+            </div>
+
+            <div class="corner-img">
+                <img src="assets/2.png" alt="">
+            </div>
+            </div>
+            <div class="black-back">
+                <div class="container">
+                    <div class="second-cont">
+                        <div class="disc">
+                            <h2>Augmented Eye Glass. Now a reality.</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra
+                                maecenas accumsan lacus vel facilisis.
+                            </p>
+                        </div>
+                        <div class="features">
+                            <div class="features-flex">
+                                <div class="boxe">
+                                    <div class="features-image">
+                                        <div class="img-back">
+                                            <div class="img">
+                                                <i class="fa-solid fa-camera fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="disc">
+                                        <h3>Stay Focused</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt
+                                            ut
+                                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="features-flex">
+                                <div class="boxe">
+                                    <div class="features-image">
+                                        <div class="img-back">
+                                            <div class="img">
+                                                <i class="fa-solid fa-bullseye fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="disc">
+                                        <h3>Improve Accuracy</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt
+                                            ut
+                                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="features-flex">
+                                <div class="boxe">
+                                    <div class="features-image">
+                                        <div class="img-back">
+                                            <div class="img">
+                                                <i class="fa-solid fa-video fa-3x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="disc">
+                                        <h3>Collaborate in Real-time</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt
+                                            ut
+                                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="services">
+                <div class="services-felx">
+                    <div class="services-disc">
+                        <h1>Augmented Eye Glass.</br>
+                            Now a reality.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                            viverra maecenas accumsan lacus vel facilisis.</p>
+                    </div>
+                    <div class="services-boxes">
+                        <div class="services-boxes-flex">
+                            <div class="box-1">
+                                <a href="index.html">
+                                    <i class="fa-solid fa-house-flag fa-4x"></i>
+                                    <h3>Advanced Manufacturing</h3>
+                                </a>
+                            </div>
+                            <div class="box-1">
+                                <a href="index.html">
+                                    <i class="fa-solid fa-user-doctor fa-4x"></i>
+                                    <h3>Medical Health</h3>
+                                </a>
+                            </div>
+                            <div class="box-1">
+                                <a href="index.html">
+                                    <i class="fa-solid fa-screwdriver-wrench fa-4x"></i>
+                                    <h3>Repair and Maintenence</h3>
+                                </a>
+                            </div>
+                            <div class="box-1" id="longest">
+                                <a href="index.html">
+                                    <i class="fa-solid fa-hand-point-up fa-4x"></i>
+                                    <h3>Skype confrence call</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="youtube-link">
+                <div class="outer-youtube-link-flex">
+                    <div class="youtube-link-flex">
+                        <div class="para">
+                            <h2>Complex assembly, done faster</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis.<br>
+
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                gravida.<br>
+
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+                                gravida.”<br>
+                            </p>
+                            <h4>CEO and Founder, XYZ</h4>
+                        </div>
+                        <div class="youtube-link-image">
+                            <div>
+                                <img src="assets/youtube-link.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="play-btn">
+                            <a href="https://www.youtube.com/watch?v=bk7McNUjWgw">
+                                <i class="fa-solid fa-circle-play fa-4x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="parterners-center">
+                <div class="parteners">
+                    <div class="parterners-flex">
+                        <div class="intro">
+                            <div class="intro-para">
+                                <h1>Meet Our Business Partner Who Work Behind The Scene</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
+                                    commodo
+                                    viverra maecenas accumsan lacus vel facilisis.</p>
+                            </div>
+                            <div class="para2">
+                                <button class="btn" id="sec-btn"><a href="index.html">Explore more</a></button>
+                            </div>
+                        </div>
+                        <div class="parterners-images">
+                            <div class="parterners-images-flex">
+                                <div class="image-part">
+                                    <div><a href=""><img src="assets/hen.png" alt=""></a></div>
+                                    <div><a href=""><img src="assets/beas.png" alt=""></a></div>
+                                </div>
+                                <div class="image-part" id="slide-down">
+                                    <div><a href=""><img src="assets/fish.png" alt=""></a></div>
+                                    <div><a href=""><img src="assets/spom.png" alt=""></a></div>
+                                </div>
+                                <div class="image-part">
+                                    <div><a href=""><img src="assets/green-snake.png" alt=""></a></div>
+                                    <div><a href=""><img src="assets/inkset.png" alt=""></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product-view">
+                        <div class="product-image">
+                            <div class="product-view-flex">
+                                <div class="product-img">
+                                    <img src="assets/product.jpg" alt="">
+                                    <div class="arrows">
+                                        <i class="fa-solid fa-arrow-left fa-2x"></i>
+                                        <i class="fa-solid fa-arrow-right fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="specification">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <h2>Specifications</h2>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    OS:
+                                                </td>
+                                                <td>
+                                                    Android KitKat
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Bluetooth Version:
+                                                </td>
+                                                <td>
+                                                    Bluetooth 4.2
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Camera:
+                                                </td>
+                                                <td>
+                                                    8Mp, 80 DFOV
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Charging Time:
+                                                </td>
+                                                <td>
+                                                    3 hours (full charge)
+                                                </td>
+                                            </tr>
+                                            <tr></tr>
+                                            <td>
+                                                Impedance
+                                            </td>
+                                            <td>
+                                                Active 490 Ω / Passive 46 Ω
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Contact pressure:
+                                                </td>
+                                                <td>
+                                                    3 N
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Transducer Principle:
+                                                </td>
+                                                <td>
+                                                    Dynamic Closed
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Operating Time:
+                                                </td>
+                                                <td>
+                                                    Up to 30 hours
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Battery:
+                                                </td>
+                                                <td>
+                                                    820mAh with fast charge
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Display:
+                                                </td>
+                                                <td>
+                                                    USB Type-C, USB 2.0 480Mbps
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Charging & Data:
+                                                </td>
+                                                <td>
+                                                    640x360 Optical Display Module
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Microphones:
+                                                </td>
+                                                <td>
+                                                    3 beam-forming microphones
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-category">
+                    <div class="product-category-flex">
+                        <div class="category-intro">
+                            <h1>We’ve The Best Quality Products For
+                                You. Our Best Colections</h1>
+                            <p>There's a future scope that eye tracking will be a standard feature of a new generation
+                                of laptops, desktop monitors, and smartphones, setting the stage for a huge reassessment
+                                of the way how the devices communicate with us or we communicate with them.</p>
+                        </div>
+                        <div class="categories">
+                            <div class="categories-flex">
+                                <div class="categories-item-1">
+                                    <div class="img-flex" id="img-flex-1">
+                                        <div>
+                                            <img src="assets/pro-cat.jpg" alt="">
+                                            <div class="para2" id="img-center">
+                                                <button class="btn" id="sec-btn"><a href="index.html">Explore
+                                                        more</a></button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/pro-cat-1.jpg" alt="">
+                                            <div class="para2" id="img-center">
+                                                <button class="btn" id="sec-btn"><a href="index.html">Explore
+                                                        more</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="categopry-item-2">
+                                    <div class="img-flex">
+                                        <div>
+                                            <img src="assets/pro-cat2.jpg" alt="">
+                                            <div class="para2" id="img-center">
+                                                <button class="btn" id="sec-btn"><a href="index.html">Explore
+                                                        more</a></button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img src="assets/procat-3.jpg" alt="">
+                                            <div class="para2" id="img-center">
+                                                <button class="btn" id="sec-btn"><a href="index.html">Explore
+                                                        more</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-gallery">
+                    <div class="img-section">
+                        <h1>Photo Gallery</h1>
+                        <div class="img-10">
+                            <div class="image-dot"><img src="assets/dot.png" alt="">
+                            </div>
+                            <div class="angullers">
+                                <div>
+                                    <i class="fa-solid fa-angle-left fa-4x"></i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-angle-right fa-4x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-rating">
+                    <div class="user-rating-start">
+                        <div class="user-heading">
+                            <h1>User Ratings Are A Confirmation
+                                Of Our Quality</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis.
+                            </p>
+                        </div>
+                        <div class="rating-container">
+                            <div class="rating-contyainer-flex">
+                                <div class="usr-1-rating">
+                                    <div class="user-iamge">
+                                        <img src="assets/client1.jpg" alt="">
+                                    </div>
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="comment">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora inventore
+                                            aspernatur vero delectus maiores laudantium tenetur esse quam nostrum Lorem
+                                            ipsum dolor sit amet consectetur.
+                                        </p>
+                                    </div>
+                                    <div class="username">
+                                        <H3>Jason statham</H3>
+                                    </div>
+                                    <div class="role">
+                                        <p>Project Manager</p>
+                                    </div>
+                                </div>
+                                <div class="usr-1-rating">
+                                    <div class="user-iamge">
+                                        <img src="assets/client2.jpg" alt="">
+                                    </div>
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="comment">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora inventore
+                                            aspernatur vero delectus maiores laudantium tenetur esse quam nostrum Lorem
+                                            ipsum dolor sit amet consectetur.
+                                        </p>
+                                    </div>
+                                    <div class="username">
+                                        <H3>Jason statham</H3>
+                                    </div>
+                                    <div class="role">
+                                        <p>Project Manager</p>
+                                    </div>
+                                </div>
+                                <div class="usr-1-rating">
+                                    <div class="user-iamge">
+                                        <img src="assets/client3.jpg" alt="">
+                                    </div>
+                                    <div class="rating-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="comment">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora inventore
+                                            aspernatur vero delectus maiores laudantium tenetur esse quam nostrum Lorem
+                                            ipsum dolor sit amet consectetur.
+                                        </p>
+                                    </div>
+                                    <div class="username">
+                                        <H3>Jason statham</H3>
+                                    </div>
+                                    <div class="role">
+                                        <p>Project Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="information">
+                    <div class="information-start">
+                        <div class="information-heading">
+                            <h1>Frequently Asked Questions</h1>
+                            <p>We look forward to supporting the client to be able to better address customer needs;
+                                stay ahead in the market; become the top competitor and get real-time recommendations on
+                                business strategies and deals. Contact us to find out how we can help you today.</p>
+                        </div>
+                        <div class="quaries">
+                            <div class="flexer">
+                                <div class="questions">
+                                    <details>
+                                        <summary>How much does Glass cost? <i class="fa-solid fa-angle-right"></i>
+                                        </summary>
+                                        <p>Eye-tracking technology helps observe and measure eye movements, pupil
+                                            dilation, point of gaze, and blinking to see where subjects of a study focus
+                                            their visual attention, what they engage with, and what they ignore.</p>
+                                    </details>
+                                    <details>
+                                        <summary>How much does Glass cost? <i class="fa-solid fa-angle-right"></i>
+                                        </summary>
+                                        <p>Eye tracking research allows researchers to study a participant's eye
+                                            movements during a range of activities. This gives insight into the
+                                            cognitive processes that underlie a wide variety of human behavior and can
+                                            reveal things like learning patterns and methods of social interaction.</p>
+                                    </details>
+                                    <details>
+                                        <summary>How much does Glass cost? <i class="fa-solid fa-angle-right"></i>
+                                        </summary>
+                                        <p>Visual technology tracking offers you the opportunity to understand better
+                                            your customers and what holds their interest. ...
+                                            Eye tracking also shows promise for improving research and the diagnosis
+                                            process in the medical field.</p>
+                                    </details>
+                                    <details>
+                                        <summary>How much does Glass cost? <i class="fa-solid fa-angle-right"></i>
+                                        </summary>
+                                        <p>Eye tracking has become an increasingly important tool in research across
+                                            various fields, including psychology, marketing, and neuroscience. The
+                                            technology allows researchers to measure and analyze where a person's gaze
+                                            is directed, providing valuable insights into attention, perception, and
+                                            decision-making.</p>
+                                    </details>
+                                    <details>
+                                        <summary>How much does Glass cost? <i class="fa-solid fa-angle-right"></i>
+                                        </summary>
+                                        <p>There are 8 major features used from eye-tracking data for classification,
+                                            which are pupil size, saccade, fixation, velocity, blink, pupil position,
+                                            EOG, and gaze point.</p>
+                                    </details>
+                                </div>
+                                <div class="image-flexer">
+                                    <img src="assets/lastimg.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="footer-start">
+            <div class="footer-flexer">
+                <div class="box1">
+                    <h3>Support</h3>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">FAQ's</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Live Chat</a></li>
+                    <li><a href="">Blog</a></li>
+                </div>
+                <div class="box2">
+                    <h3>Quick Links</h3>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">FAQ's</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                    <li><a href="">Live Chat</a></li>
+                    <li><a href="">Blog</a></li>
+                </div>
+                <div class="box3">
+                    <h3>Our News</h3>
+                    <div class="news-flex">
+                        <div><a href="https://templates.envytheme.com/busan/default/single-blog.html"><img
+                                    src="assets/pro-cat.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="outside-img">
+                            <h3><a href="https://templates.envytheme.com/busan/default/single-blog.html">How to change
+                                    yourself for the better</h3>
+                            </a>
+                            14th August, 2024
+                        </div>
+                    </div>
+                    <div class="news-flex">
+                        <div> <a href="https://templates.envytheme.com/busan/default/single-blog.html"><img
+                                    src="assets/pro-cat-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="outside-img">
+                            <h3><a href="https://templates.envytheme.com/busan/default/single-blog.html">10 Tactics for
+                                    marketing your company</h3>
+                            </a>
+                            15th August, 2024
+                        </div>
+                    </div>
+                </div>
+                <div class="box4">
+                    <h3>Newsletter</h3>
+                    <h4>Get weekly new updates!</h4>
+                    <form class="example" action="#">
+                        <input type="text" placeholder="Email address" name="search">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p>We'll never share your email address:</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                        <a href="https://www.twitter.com/"><i class="fa-brands fa-square-twitter fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copywrite-area">
+            <div class="aline-center-copywrite">
+                <div class="link">
+                    <div>
+                        <h3>© Busan is Proudly Owned by</h3>
+                    </div>
+                    <div><a href="https://envytheme.com/">
+                            <h3>EnvyTheme</h3>
+                        </a></div>
+                </div>
+                <div class="policies">
+                    <div>
+                        <li><a href="#">Privacy Policy |
+                            </a></li>
+                    </div>
+                    <div>
+                        <li><a href="#"> Terms & Conditions</a></li>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <button class="lst-btn">
+            <div><a href="index.html"><i class="fa-solid fa-arrow-up"></i></a></div>
+        </button>
+    </footer>
+</body>
+
+</html>
